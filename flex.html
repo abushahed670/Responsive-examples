@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Responsive Flexbox</title>
     <style>
+        .container{
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            gap: 10px;
+
+        }
         .box{
             height: 200px;
+            width: 100%;
+            /* width: 700px; */
             background-color:seagreen;
+        }
+        @media screen and (max-width: 576px) {
+            .container{
+                flex-direction: column;
+            }
+            
+        }
+        @media screen and (min-width: 577px) and (max-width:992px) {
+            .box{
+                background-color: antiquewhite;
+            }
         }
     </style>
 </head>
